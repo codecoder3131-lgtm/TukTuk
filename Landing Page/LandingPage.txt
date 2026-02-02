@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101622",
+                        "saffron": "#f4a460",
+                        "gold": "#d4af37",
+                        "whatsapp": "#25D366"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .nav-link {
+                @apply relative py-2 px-1 text-[15px] font-semibold text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-primary dark:hover:text-primary;
+            }
+            .nav-link::after {
+                content: '';
+                @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+        }
+        body {
+            min-height: 100dvh;
+        }
+        .hero-video-overlay {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<title>Tuktuk Udaipur</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white">
+<nav class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">travel_explore</span>
+<span class="text-xl font-bold tracking-tight">Tuktuk Udaipur</span>
+</div>
+<div class="flex items-center gap-8">
+<a class="nav-link text-primary after:w-full" href="#">Home</a>
+<a class="nav-link" href="#">About Us</a>
+<a class="nav-link" href="#">Itinerary</a>
+<a class="nav-link" href="#">Attractions</a>
+<a class="nav-link" href="#">Contact Us</a>
+</div>
+</div>
+</nav>
+<section class="relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic Udaipur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpLGCfqG-_hh_Nd1eJ5Me22GpHHGLg5kwJpelCxBNbuYWd62Dc7FgeHFywDdBnDBebZ9MOXdoIL01-CiqgQC94GyMsmLyupWTCZyQgy7PCEbz4a94U-F5B5ySnwQ2wY847__ltZ6DYPLozSIiBkSKgh1QfmaD1OiGS20UU7hWkJS3xTJ5KrQ8HTmgKL0otqktOUtRUcVXJIaT9mfO2xFP1Z1TRNWUauUjDrCR0hyjMqkTqZzm8gB7lmyHob9dsAGdQeaB0IXdqNY"/>
+<div class="absolute inset-0 hero-video-overlay"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="text-white text-5xl md:text-7xl font-bold mb-8 leading-tight">Experience Udaipur Your Way</h1>
+<button class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-xl">
+            View Itineraries
+        </button>
+</div>
+</section>
+<section class="py-20 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Fleet</h2>
+<div class="h-1 w-20 bg-saffron mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all hover:shadow-2xl">
+<div class="h-80 overflow-hidden">
+<img alt="Modern Taxi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKFIk30mYPVfL1CedRbrEfaCHdNhb48unMNzoqXrYUV8KIym43DxZZNMLTMo_lyEEz00JqMG8dralSsYp_crkeN7P-Gi9IF3k1tBXTtNKH8cp7M7MAA8tHkXImZNsUFo2mMe75FSkNaWPahpgnIeARgZ-Vo3ErKBwaK2pEvL01P0_CTFawERuan0T-GcSaiqV3mJMALEwjhzG9ozOrV8WwbX7E-h-z379v7yTj6YVmePyIg0TkCJYEmp-3xqOD0fOjpoeMpcP2A9A"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold mb-2">Premium Sedan Taxi</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-4">Luxury air-conditioned comfort for long distances and families.</p>
+<div class="flex gap-4">
+<span class="flex items-center gap-1 text-sm text-gray-500"><span class="material-symbols-outlined text-lg">ac_unit</span> AC</span>
+<span class="flex items-center gap-1 text-sm text-gray-500"><span class="material-symbols-outlined text-lg">group</span> 4+1 Seater</span>
+</div>
+</div>
+</div>
+<div class="group overflow-hidden rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 transition-all hover:shadow-2xl">
+<div class="h-80 overflow-hidden">
+<img alt="Traditional TukTuk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWMAgqxeIL8RAJ4z2uwXWF45F6v28zmaKuOvEENkhfiWkDaQqR2daJPAzeeYar5oIEpv7vPOTgguNd-Y8LofE9mqG70PI8l35MskWTOuCshHXsSYn-XxInUyK8kIUrycGVpYzpePK9PNdGhA-tkcs0dlOMb8HqidozG5kF_Gn_vgHXjEdGLIO2mrSZ85dHLDx6O3jMmCXHSXMIC-uRkGTn4QaycZcbY9Iff36LqfTASt5J18PydAXSIgKM-jB-w_8gHhjJkRov_9E"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold mb-2">Heritage TukTuk</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-4">Authentic local experience, perfect for navigating narrow Old City lanes.</p>
+<div class="flex gap-4">
+<span class="flex items-center gap-1 text-sm text-gray-500"><span class="material-symbols-outlined text-lg">open_in_full</span> Open Air</span>
+<span class="flex items-center gap-1 text-sm text-gray-500"><span class="material-symbols-outlined text-lg">group</span> 3 Seater</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50 dark:bg-[#0c121d]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Must Visit Attractions</h2>
+<p class="text-gray-600 dark:text-gray-400 max-w-xl">Curated spots that define the soul of the City of Lakes.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                View All Attractions <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-md">
+<div class="h-64">
+<img alt="City Palace Udaipur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi2SmCjIw9C59bFZmBBoNlgBtqETFQYjEOGusyZeAyPmca7BpHO5-h9uuU2LEHx-nvjgGQZmtCPEt6GfNDfjtRwR--U8EDsDIEpZ_clNVeIPJAaNSjbICtvM7d5Nmt35HI2K3zKa2i9h5JlHt-Kf2CIMenD5VfrcVLcENI4tsB50efdQWSfAgUIhO1qr9P8UYhm35JVn4e7Zxc5m46Y2-AsEY1rPCsN8UeFmtzHnoxvcz02cvlNHHJ4ZfrctgDdb8ET-X0AycTShs"/>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold mb-2">City Palace</h4>
+<p class="text-gray-500 text-sm mb-4">A 400-year-old architectural marvel overlooking Lake Pichola.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-md">
+<div class="h-64">
+<img alt="Lake Pichola Udaipur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBic5dZL0vCd5mMUyBZzvP3vIxWwoGZq68TSehbGH3d2A053iyASV_DGl00KT-stjUM_WgX8DjZ_ET1-Adz8B1eFG7GV00k4FBqqHPyXeMj6Q2tmfLEnjrbdkoSlF3KmvmE-03NS1VSig_J0QV-zSUn6koMElL_9uCrob09IDk-99Q9P0IyxSsDCmxOupVnCC7yTTHNmO5PZPqGwPdLp23rObmvKbM-pSQOSoA3Hn0eJ1nZlGsFRY-7PAK3QEMeAoestn48ilUahVw"/>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold mb-2">Lake Pichola</h4>
+<p class="text-gray-500 text-sm mb-4">Experience a serene boat ride during the golden sunset hour.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-md">
+<div class="h-64">
+<img alt="Sunset Points" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpLGCfqG-_hh_Nd1eJ5Me22GpHHGLg5kwJpelCxBNbuYWd62Dc7FgeHFywDdBnDBebZ9MOXdoIL01-CiqgQC94GyMsmLyupWTCZyQgy7PCEbz4a94U-F5B5ySnwQ2wY847__ltZ6DYPLozSIiBkSKgh1QfmaD1OiGS20UU7hWkJS3xTJ5KrQ8HTmgKL0otqktOUtRUcVXJIaT9mfO2xFP1Z1TRNWUauUjDrCR0hyjMqkTqZzm8gB7lmyHob9dsAGdQeaB0IXdqNY"/>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold mb-2">Sunset Points</h4>
+<p class="text-gray-500 text-sm mb-4">The most breathtaking panoramic views from Sajjangarh Fort.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark text-white pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">travel_explore</span>
+<span class="text-2xl font-bold tracking-tight">Tuktuk Udaipur</span>
+</div>
+<p class="text-gray-400 max-w-md mb-8">
+                    Providing professional taxi and TukTuk services in Udaipur since 2008. We pride ourselves on reliability, safety, and authentic local experiences.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share_reviews</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">photo_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-lg mb-6">Quick Links</h5>
+<ul class="space-y-4 text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#">Our Heritage</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Custom Tours</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Airport Pickup</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-lg mb-6">Contact</h5>
+<ul class="space-y-4 text-gray-400">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-saffron">location_on</span>
+                        Old City, Udaipur, Rajasthan
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-saffron">call</span>
+                        +91 98765 43210
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-saffron">mail</span>
+                        info@tuktukudaipur.com
+                    </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+            © 2024 Tuktuk Udaipur. All rights reserved.
+        </div>
+</div>
+</footer>
+<a class="fixed bottom-8 right-8 z-50 bg-whatsapp hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 group" href="#">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<span class="absolute right-full mr-4 bg-white text-gray-800 px-4 py-2 rounded-lg text-sm font-bold shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+        Chat on WhatsApp
+    </span>
+</a>
+
+</body></html>

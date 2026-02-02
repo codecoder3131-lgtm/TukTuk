@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "saffron": "#f4a460",
+                        "gold": "#d4af37",
+                        "whatsapp": "#25D366"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            min-height: 100vh;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800">
+<div class="max-w-[1600px] mx-auto px-8 h-24 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img src="../images/logo.png" alt="Tuktuk Udaipur Logo" class="h-12 w-12 object-contain">
+<div class="flex flex-col">
+<span class="text-2xl font-bold tracking-tight leading-none">Tuktuk Udaipur</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-12 font-semibold">
+<a class="hover:text-primary transition-colors py-2" href="../Landing Page/LandingPage.html">Home</a>
+<a class="hover:text-primary transition-colors py-2" href="../About Us/AboutUS.html">About Us</a>
+<a class="hover:text-primary transition-colors py-2" href="../Itinerary/Itinerary.html">Itinerary</a>
+<a class="hover:text-primary transition-colors py-2" href="../Attractions/Attractions.html">Attractions</a>
+<a class="text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary py-2" href="ContactUs.html">Contact Us</a>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-16">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h1 class="text-5xl font-extrabold mb-6 tracking-tight">Get in Touch</h1>
+<p class="text-gray-500 dark:text-gray-400 text-xl leading-relaxed">
+            Ready to explore the City of Lakes? Book your Tuktuk or Taxi tour today. Our local guides are ready to show you the real Udaipur.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+<div class="lg:col-span-7 bg-white dark:bg-gray-900 p-8 lg:p-12 rounded-[2rem] shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800">
+<h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">edit_note</span>
+                Plan Your Journey
+            </h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-gray-400 ml-1">Full Name</label>
+<input class="w-full px-5 py-4 rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-800/50 focus:ring-primary focus:border-primary transition-all bg-gray-50/50" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-gray-400 ml-1">Phone Number</label>
+<input class="w-full px-5 py-4 rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-800/50 focus:ring-primary focus:border-primary transition-all bg-gray-50/50" placeholder="+91 00000 00000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-gray-400 ml-1">Service Type</label>
+<select class="w-full px-5 py-4 rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-800/50 focus:ring-primary focus:border-primary transition-all bg-gray-50/50">
+<option>Heritage Tuktuk Tour</option>
+<option>Private SUV Taxi Service</option>
+<option>Airport/Station Transfer</option>
+<option>Custom Day Trip</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] font-bold uppercase tracking-wider text-gray-400 ml-1">Your Message</label>
+<textarea class="w-full px-5 py-4 rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-800/50 focus:ring-primary focus:border-primary transition-all bg-gray-50/50" placeholder="Tell us about your travel dates and requirements..." rows="5"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-5 rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3 text-lg" type="submit">
+<span class="material-symbols-outlined">send</span>
+                    Send Inquiry
+                </button>
+</form>
+</div>
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-white dark:bg-gray-900 p-8 lg:p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800 shadow-sm">
+<h2 class="text-3xl font-bold mb-6">Quick Connect</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">
+                    Need an immediate response? Connect with our desk directly via WhatsApp or Call.
+                </p>
+<div class="flex flex-col gap-4">
+<a class="flex items-center justify-center gap-3 bg-whatsapp text-white font-bold py-5 px-8 rounded-xl hover:opacity-95 transition-all shadow-lg shadow-whatsapp/20 text-lg" href="https://wa.me/#">
+<span class="material-symbols-outlined">chat</span>
+                        Message on WhatsApp
+                    </a>
+<a class="flex items-center justify-center gap-3 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white font-bold py-5 px-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-100 transition-all text-lg" href="tel:+">
+<span class="material-symbols-outlined">call</span>
+                        Call: +91 98765 43210
+                    </a>
+</div>
+<div class="mt-10 space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl shrink-0">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-base">Base Location</h4>
+<p class="text-gray-500 text-sm">Old City, Near City Palace, Udaipur, Rajasthan 313001</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-xl shrink-0">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<h4 class="font-bold text-base">Email Us</h4>
+<p class="text-gray-500 text-sm">hello@tuktukudaipur.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-[2rem] text-white flex items-center gap-5 shadow-lg shadow-primary/20">
+<div class="size-14 rounded-xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Registered Service</h4>
+<p class="text-white/80 text-sm">Authorized by Rajasthan Tourism Dept.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">map</span>
+            Find Us in the Heart of Udaipur
+        </h2>
+<div class="w-full h-[450px] bg-gray-200 rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 relative group">
+<div class="absolute inset-0 bg-cover bg-center grayscale-[0.1] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqqkrrsMbGyn4B3sMvSEgKmKId6dsscjAq-_5Lg3fqHmKTZZYCINlCHj3oP9SP5OHtYw--6pqrawJv47anKcUudHvdRRzrA72vTVE_LTS6-TKH9vfaewqoxZGIn5Pkk-rUiBkRYBVT8XIqzAHlG5mrwCBMRqaGC_uoD-SDPTOfz1STElqP-Xf0DiuLa8chRl53g2QmcbWPML1ptvW7aFtM9LqrfcMZZaC5WH0xKUP3arJoljeU4lj1u7PciVa8F5YAQEj-_HTlkIE");'>
+<div class="absolute inset-0 bg-black/5"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-white px-5 py-2 rounded-full shadow-2xl text-xs font-bold mb-4 border-2 border-primary text-primary whitespace-nowrap">Tuktuk Udaipur Base HQ</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary animate-ping rounded-full opacity-30"></div>
+<span class="material-symbols-outlined text-primary text-6xl leading-none relative z-10" style="font-variation-settings: 'FILL' 1">location_on</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 bg-white/95 dark:bg-gray-900/95 backdrop-blur px-6 py-3 rounded-2xl shadow-xl text-[10px] font-bold uppercase tracking-[0.2em] border border-gray-100 dark:border-gray-800">
+                Google Maps Data © 2024
+            </div>
+</div>
+</div>
+</main>
+<footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
+<div class="max-w-[1600px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-saffron p-2 rounded-lg">
+<span class="material-symbols-outlined text-white">taxi_alert</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Tuktuk Udaipur</span>
+</div>
+<p class="text-slate-400 leading-relaxed">Your trusted partner for exploring the royal heritage of Udaipur with comfort and expertise.</p>
+</div>
+<div class="col-span-1">
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Itinerary</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Attractions</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-lg font-bold mb-6">Our Services</h4>
+<ul class="space-y-4 text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Full Day City Tour</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Airport Transfers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">TukTuk Adventures</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-lg font-bold mb-6">Contact Us</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-saffron">call</span> +91 98765 43210</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-saffron">mail</span> hello@tuktukudaipur.com</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-saffron">location_on</span> Old City, Udaipur, India</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 text-center">
+<p class="text-slate-500 text-sm">© 2024 Tuktuk Udaipur &amp; Taxi Services.</p>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                        "saffron": "#f4a460",
+                        "gold": "#d4af37",
+                        "garden": "#2d6a4f",
+                        "heritage": "#8b4513",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .gallery-hover {
+                @apply transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl hover:z-10 relative cursor-pointer;
+            }
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800">
+<div class="max-w-[1600px] mx-auto px-8 h-24 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-saffron p-2.5 rounded-xl shadow-lg shadow-saffron/20">
+<span class="material-symbols-outlined text-white text-2xl">taxi_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold tracking-tight leading-none">Tuktuk Udaipur</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-12 font-semibold">
+<a class="hover:text-primary transition-colors py-2" href="#">Home</a>
+<a class="hover:text-primary transition-colors py-2" href="#">About Us</a>
+<a class="hover:text-primary transition-colors py-2" href="#">Itinerary</a>
+<a class="text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary py-2" href="#">Attractions</a>
+<a class="hover:text-primary transition-colors py-2" href="#">Contact Us</a>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-[1600px] mx-auto px-4 md:px-8 py-12 md:py-16">
+<header class="mb-16 md:mb-24 text-center max-w-4xl mx-auto">
+<span class="text-saffron font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block">Discover the Venice of the East</span>
+<h1 class="text-4xl md:text-7xl font-bold mb-6 tracking-tighter">Udaipur Attractions</h1>
+<div class="h-1.5 w-24 bg-primary mx-auto mb-8 rounded-full"></div>
+<p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl leading-relaxed">Experience the majestic grandeur of Rajasthan with our premium tour services. From historic palaces to serene lake views, explore Udaipur in comfort and style.</p>
+</header>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-saffron font-bold tracking-widest uppercase text-sm border-l-4 border-saffron pl-4">Experience Royalty</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">The Royal City Palace</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">Built over 400 years, this architectural marvel towers over Lake Pichola with its intricate marble craftsmanship.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Intricate Marble Carvings City Palace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyY4R6FpvQq7_M_aSKgivokyU4KTuVMSxcuqBJaFnrAQpQSzFzmMSzCawAXec3qp4sktykMrVPV-XyUpRQ4_9Z3jyHVrtoL2Lg9fiF0eOkOXnYkuUPxLGoJXY__djeIF0R_iLZRD15uTSFfKfdHfNUoY9BhPw6hl8XrTTJKnjHqhRnlLz2LkxonO4-Z9ZjuPzS3tL4iPY3NNoEf4cFXVV1FnDbsMlzJu7m4hWexepVS4GnYysw9-AZOB8lAbIFXQzoZttZVyAWZaE"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="City Palace Udaipur Exterior View" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcLI2DGkfy3YI7WKF0uLyF-uSWkoNzV5R85G1NGvCVVxMueMf_GmKkAif2w-W4gBpstfn-y1LWKIsQj01V51txrB5XW3CESWwHjvemGKSd79RHZSr2oP3Mlto_Y7q9m1UDvwvd2AFOmcTdQV31MGbZvOpAXxIhNGAgB41xhRSRZayX-j8N2ba6mhdL5YPLeiN7tBzpxUlSwwkYCgySG5CkqPuL-_mXIbcolXYXz4Ii7_J84v1Ty_8D40ONcp0ICj2UCW0lJ4h4VAU"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Royal Courtyard of Udaipur Palace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC145mnHSK-yH7lkyxDIK_xbyHcPdKqZ-OtbYcyIuJQAia0B8CZ4r8zKvoqNOkZevpxKrxqnq0oX__zvIxFZ5HxqpBaJIABAwti6NsG5RNyt8pyI3nasHs-MwEwXsFpC--CkAfHFF8-rbdRNwj-2KGD1XN8oJzgbSIAYq925qpWALqW_6u6n9v9B8jJvygf1XdZT__sBNM4cKoMuvEPHjdc1dG5llYmyUsddiWT7fZ6ijj04YDMxfoXK04kbmgrYf4xVcmrvjpTlSs"/>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-primary font-bold tracking-widest uppercase text-sm border-l-4 border-primary pl-4">Waterfront Views</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">Scenic Lake Pichola</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">The soul of Udaipur. A boat ride here at dusk offers panoramic views of the Taj Lake Palace and Jag Mandir.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Taj Lake Palace Udaipur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSA12FweIyGGxxTq-Z8yOxWOFpW1PeKhYeW3fQTwSf-QDByBy-oWOuXXyd6F-LsvvfbT_3catDMf4wZ315__dlzlbMdCKoyadNEZouXyB-YwOWM8yBWYluSXnly4VfCr9zP_AnaGwoL-ifylnmwqr6cWf-weXEbauTq_kd7nwG8mJ4z9KOom2Eywb9rvHrfA6-F8dv79aCLMkCE_tnJnSFgJCudWujWYMISVVF1eVcyHM8opIMdIgpIYi6JvtuMaxyZt8Gl-lyYP0"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Jag Mandir Island Palace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkhWBvIJmu1P3iyEkhrQkskXN-ia9ayKUaltxqoLc_BvaneX8Y8UXBD_0GLCM4SS93fs6Q6FzcVwJdim_v_XCwUAMINaz6Havd0Mj-6Si0t7fZ8PffRP3pk_y5lMQ0TDW87ma-7yCFlaoFw2OUwk8OUZwhYEs__zBhpd7ZtH0bsYEb2lvSmIlPIvzhHzJ_vX5ZNXIfajaOPLD9cQU3yf1gHL8ZTXFRrT1LCBPFgnZA3WAdq-cUaTAYuU9r1xIVgxXHX3fY44OkMX4"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Lake Pichola Boat View" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0oHauTSLSTlCJulTOcj_cwxXtV7Ketax3QJ8-Y5PYjQVcOS2qLjr1GYTgEv_-9bQ0_eAK0eNmuwZLl8bWHTuYRc3tDDx-YPv-bkhWLqWDWrrbsDHAd3a8pLYLGkiPr9KJUFAd1YrlpzRfMXsCUm1dM0wSdfxlkEakm0YhgJqUVGgfkyHe4Bnd7nkOiJ1Ug4qir4vEOI5t__7sX7RDbNmWZxfiKUVcblyn0MZa_O7ZjPJFqQQveNZTox2RUPEzmdnLfILCAKVzBnk"/>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-gold font-bold tracking-widest uppercase text-sm border-l-4 border-gold pl-4">Golden Hour</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">Iconic Sunset Points</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">Udaipur offers the most magical sunsets as the sky turns into a canvas of gold from Sajjangarh to Ambrai Ghat.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Sunset at Ambrai Ghat" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxk682IFGkkynsYPsLRShpvzHOZMMW3Qyfqzfy1JO7CUIvHJ-vTljuyhcoKz0w3ajcOs1DSQrr2WTX3_lGCboQwdgAx35WiWf_RaZX0gBgv7BSt8KoSzK7L8JVjCvIdIWOPqfyMQ60J8Es6FuVB0m6o9yrshYSFGPzBRhy4_BzjUh5qZDsbezyb-k56AXe22ArR6DzZMeOcrEZz6Y7M2tjrGfefv_3enk0W_OiYMi7SFu9Xim-Qq8vUrDw0iWEKfDocXh9YTCAiCE"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Golden sky over Udaipur city" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6CfjFyZbLQSJwP2F7Jp9kVrhfQwkgUwMzHCECowye4AGCq8AOZMaRZSG8erVh5cmj2lgg1FehYOm2yNHjs6AsGkdQba1wbg_lBSve9CHKwP5DJeZj7L9VHh-PuJU4oIVKKan92rCWxrn-DVLzLXsSlCwVjwtiXKZnu178-ISS84b2p4pacjdAX694mbZc_4UUgVEe-mrp-ccXWZWol-dctTuKbNdf5qWO1WD4osIA5U7-Lq65LLGfxTomZA_kLStbelLo255_WSw"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Sajjangarh Monsoon Palace Sunset" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPCSpSdQoRypAw-uA31onbC82ZbYYX3TowqV1RRWzGoXD7IsIG5fWf9dp2yhUnP6i0Z5WNmldODiCKYS_FyMVTgyu5WXoKoRCTSZGtGMuJfX9_BIIFwsE6VRqrNC_hyJjkmrUvmSoMipbvQo74pS6uPZ5be1AZEVw3CouA4rO0Gdbe72_-HpI7RbTXnYIloKeEiTgg-nVdaOgyIu3srjURLU27Ghf2jC2CplzX6krGjwvAHa-7PS86YhSCaSVnrUaSrCOCFKCcs9I"/>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-garden font-bold tracking-widest uppercase text-sm border-l-4 border-garden pl-4">Botanical Oasis</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">Saheliyon-ki-Bari</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">The 'Garden of Maidens' features beautiful lotus pools, marble elephants, and bird fountains that come alive in monsoon.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Saheliyon-ki-Bari Fountains" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0oHauTSLSTlCJulTOcj_cwxXtV7Ketax3QJ8-Y5PYjQVcOS2qLjr1GYTgEv_-9bQ0_eAK0eNmuwZLl8bWHTuYRc3tDDx-YPv-bkhWLqWDWrrbsDHAd3a8pLYLGkiPr9KJUFAd1YrlpzRfMXsCUm1dM0wSdfxlkEakm0YhgJqUVGgfkyHe4Bnd7nkOiJ1Ug4qir4vEOI5t__7sX7RDbNmWZxfiKUVcblyn0MZa_O7ZjPJFqQQveNZTox2RUPEzmdnLfILCAKVzBnk"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Marble Elephants Garden" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkhWBvIJmu1P3iyEkhrQkskXN-ia9ayKUaltxqoLc_BvaneX8Y8UXBD_0GLCM4SS93fs6Q6FzcVwJdim_v_XCwUAMINaz6Havd0Mj-6Si0t7fZ8PffRP3pk_y5lMQ0TDW87ma-7yCFlaoFw2OUwk8OUZwhYEs__zBhpd7ZtH0bsYEb2lvSmIlPIvzhHzJ_vX5ZNXIfajaOPLD9cQU3yf1gHL8ZTXFRrT1LCBPFgnZA3WAdq-cUaTAYuU9r1xIVgxXHX3fY44OkMX4"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Lush Garden View" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyY4R6FpvQq7_M_aSKgivokyU4KTuVMSxcuqBJaFnrAQpQSzFzmMSzCawAXec3qp4sktykMrVPV-XyUpRQ4_9Z3jyHVrtoL2Lg9fiF0eOkOXnYkuUPxLGoJXY__djeIF0R_iLZRD15uTSFfKfdHfNUoY9BhPw6hl8XrTTJKnjHqhRnlLz2LkxonO4-Z9ZjuPzS3tL4iPY3NNoEf4cFXVV1FnDbsMlzJu7m4hWexepVS4GnYysw9-AZOB8lAbIFXQzoZttZVyAWZaE"/>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-slate-700 dark:text-slate-300 font-bold tracking-widest uppercase text-sm border-l-4 border-slate-700 pl-4">Indo-Aryan Craft</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">Jagdish Temple</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">A large Hindu temple in the middle of Udaipur, famous for its ornate carvings and stunning architectural scale.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Jagdish Temple Carvings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC145mnHSK-yH7lkyxDIK_xbyHcPdKqZ-OtbYcyIuJQAia0B8CZ4r8zKvoqNOkZevpxKrxqnq0oX__zvIxFZ5HxqpBaJIABAwti6NsG5RNyt8pyI3nasHs-MwEwXsFpC--CkAfHFF8-rbdRNwj-2KGD1XN8oJzgbSIAYq925qpWALqW_6u6n9v9B8jJvygf1XdZT__sBNM4cKoMuvEPHjdc1dG5llYmyUsddiWT7fZ6ijj04YDMxfoXK04kbmgrYf4xVcmrvjpTlSs"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Main Temple Structure" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcLI2DGkfy3YI7WKF0uLyF-uSWkoNzV5R85G1NGvCVVxMueMf_GmKkAif2w-W4gBpstfn-y1LWKIsQj01V51txrB5XW3CESWwHjvemGKSd79RHZSr2oP3Mlto_Y7q9m1UDvwvd2AFOmcTdQV31MGbZvOpAXxIhNGAgB41xhRSRZayX-j8N2ba6mhdL5YPLeiN7tBzpxUlSwwkYCgySG5CkqPuL-_mXIbcolXYXz4Ii7_J84v1Ty_8D40ONcp0ICj2UCW0lJ4h4VAU"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Temple Entrance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyY4R6FpvQq7_M_aSKgivokyU4KTuVMSxcuqBJaFnrAQpQSzFzmMSzCawAXec3qp4sktykMrVPV-XyUpRQ4_9Z3jyHVrtoL2Lg9fiF0eOkOXnYkuUPxLGoJXY__djeIF0R_iLZRD15uTSFfKfdHfNUoY9BhPw6hl8XrTTJKnjHqhRnlLz2LkxonO4-Z9ZjuPzS3tL4iPY3NNoEf4cFXVV1FnDbsMlzJu7m4hWexepVS4GnYysw9-AZOB8lAbIFXQzoZttZVyAWZaE"/>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-primary font-bold tracking-widest uppercase text-sm border-l-4 border-primary pl-4">The Pride of Udaipur</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">Fateh Sagar Lake</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">This artificial lake is home to three small islands and the Udaipur Solar Observatory, offering serene evening walks.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Fateh Sagar Lake Boat" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0oHauTSLSTlCJulTOcj_cwxXtV7Ketax3QJ8-Y5PYjQVcOS2qLjr1GYTgEv_-9bQ0_eAK0eNmuwZLl8bWHTuYRc3tDDx-YPv-bkhWLqWDWrrbsDHAd3a8pLYLGkiPr9KJUFAd1YrlpzRfMXsCUm1dM0wSdfxlkEakm0YhgJqUVGgfkyHe4Bnd7nkOiJ1Ug4qir4vEOI5t__7sX7RDbNmWZxfiKUVcblyn0MZa_O7ZjPJFqQQveNZTox2RUPEzmdnLfILCAKVzBnk"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Nehru Park Island" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSA12FweIyGGxxTq-Z8yOxWOFpW1PeKhYeW3fQTwSf-QDByBy-oWOuXXyd6F-LsvvfbT_3catDMf4wZ315__dlzlbMdCKoyadNEZouXyB-YwOWM8yBWYluSXnly4VfCr9zP_AnaGwoL-ifylnmwqr6cWf-weXEbauTq_kd7nwG8mJ4z9KOom2Eywb9rvHrfA6-F8dv79aCLMkCE_tnJnSFgJCudWujWYMISVVF1eVcyHM8opIMdIgpIYi6JvtuMaxyZt8Gl-lyYP0"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Panoramic Lake View" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6CfjFyZbLQSJwP2F7Jp9kVrhfQwkgUwMzHCECowye4AGCq8AOZMaRZSG8erVh5cmj2lgg1FehYOm2yNHjs6AsGkdQba1wbg_lBSve9CHKwP5DJeZj7L9VHh-PuJU4oIVKKan92rCWxrn-DVLzLXsSlCwVjwtiXKZnu178-ISS84b2p4pacjdAX694mbZc_4UUgVEe-mrp-ccXWZWol-dctTuKbNdf5qWO1WD4osIA5U7-Lq65LLGfxTomZA_kLStbelLo255_WSw"/>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col lg:flex-row gap-8 lg:gap-20 mb-24 items-start">
+<div class="w-full lg:w-1/4 lg:sticky lg:top-40">
+<div class="space-y-6">
+<div class="flex items-center justify-between lg:block">
+<span class="text-heritage font-bold tracking-widest uppercase text-sm border-l-4 border-heritage pl-4">Cultural Heritage</span>
+<a class="lg:hidden text-primary font-bold text-sm flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight">Bagore Ki Haveli</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">A historic haveli showcasing Mewar's aristocratic culture, famous for its glass work and evening folk dance performances.</p>
+<div class="hidden lg:block">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                            View All Collection <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-3/4 group relative">
+<div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar">
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Bagore Ki Haveli Entrance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcLI2DGkfy3YI7WKF0uLyF-uSWkoNzV5R85G1NGvCVVxMueMf_GmKkAif2w-W4gBpstfn-y1LWKIsQj01V51txrB5XW3CESWwHjvemGKSd79RHZSr2oP3Mlto_Y7q9m1UDvwvd2AFOmcTdQV31MGbZvOpAXxIhNGAgB41xhRSRZayX-j8N2ba6mhdL5YPLeiN7tBzpxUlSwwkYCgySG5CkqPuL-_mXIbcolXYXz4Ii7_J84v1Ty_8D40ONcp0ICj2UCW0lJ4h4VAU"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Cultural Museum Interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC145mnHSK-yH7lkyxDIK_xbyHcPdKqZ-OtbYcyIuJQAia0B8CZ4r8zKvoqNOkZevpxKrxqnq0oX__zvIxFZ5HxqpBaJIABAwti6NsG5RNyt8pyI3nasHs-MwEwXsFpC--CkAfHFF8-rbdRNwj-2KGD1XN8oJzgbSIAYq925qpWALqW_6u6n9v9B8jJvygf1XdZT__sBNM4cKoMuvEPHjdc1dG5llYmyUsddiWT7fZ6ijj04YDMxfoXK04kbmgrYf4xVcmrvjpTlSs"/>
+</div>
+<div class="min-w-[85%] md:min-w-[45%] lg:min-w-[40%] snap-center gallery-hover rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
+<img alt="Dharohar Folk Dance Stage" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxk682IFGkkynsYPsLRShpvzHOZMMW3Qyfqzfy1JO7CUIvHJ-vTljuyhcoKz0w3ajcOs1DSQrr2WTX3_lGCboQwdgAx35WiWf_RaZX0gBgv7BSt8KoSzK7L8JVjCvIdIWOPqfyMQ60J8Es6FuVB0m6o9yrshYSFGPzBRhy4_BzjUh5qZDsbezyb-k56AXe22ArR6DzZMeOcrEZz6Y7M2tjrGfefv_3enk0W_OiYMi7SFu9Xim-Qq8vUrDw0iWEKfDocXh9YTCAiCE"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<a class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform group" href="https://wa.me/#">
+<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.512-2.96-2.626-.088-.113-.716-.953-.716-1.819 0-.866.454-1.292.614-1.463.16-.171.352-.214.47-.214.117 0 .235.001.337.006.11.004.258-.043.408.326.154.377.525 1.282.572 1.377.047.095.078.206.015.332-.063.126-.094.205-.189.315-.094.11-.198.245-.282.329-.095.094-.194.197-.083.388.111.19.493.813 1.06 1.317.73.65 1.344.852 1.534.945.19.094.301.079.412-.047.111-.126.474-.552.601-.741.127-.189.254-.158.428-.094.174.063 1.103.52 1.293.614.19.094.317.142.364.221.048.079.048.459-.097.864z"></path>
+</svg>
+</a>
+<footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
+<div class="max-w-[1600px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-saffron p-2 rounded-lg">
+<span class="material-symbols-outlined text-white">taxi_alert</span>
+</div>
+<span class="text-xl font-bold tracking-tight">Tuktuk Udaipur</span>
+</div>
+<p class="text-slate-400 leading-relaxed">Your trusted partner for exploring the royal heritage of Udaipur with comfort and expertise.</p>
+</div>
+<div class="col-span-1">
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Itinerary</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Attractions</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-lg font-bold mb-6">Our Services</h4>
+<ul class="space-y-4 text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Full Day City Tour</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Airport Transfers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">TukTuk Adventures</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-lg font-bold mb-6">Contact Us</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-saffron">call</span> +91 98765 43210</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-saffron">mail</span> hello@tuktukudaipur.com</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-saffron">location_on</span> Old City, Udaipur, India</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 text-center">
+<p class="text-slate-500 text-sm">© 2024 Tuktuk Udaipur &amp; Taxi Services.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
